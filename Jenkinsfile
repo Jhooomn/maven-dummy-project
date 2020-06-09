@@ -11,9 +11,8 @@ pipeline {
     stage('TEST'){
       steps {
          sh 'mvn clean install compile test'
-      
+         junit 'reports/**/*.xml'
       }
-     
     }
   }
  
